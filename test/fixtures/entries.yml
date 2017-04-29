@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: entries
+#
+#  id         :integer          not null, primary key
+#  date       :datetime
+#  pain       :integer
+#  diary      :text
+#  medtype    :string
+#  activity   :integer
+#  doses      :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-04-29 18:07:26
+  pain: 1
+  diary: MyText
+  medtype: MyString
+  activity: 1
+  doses: 1
+
+two:
+  date: 2017-04-29 18:07:26
+  pain: 1
+  diary: MyText
+  medtype: MyString
+  activity: 1
+  doses: 1
