@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430164903) do
+ActiveRecord::Schema.define(version: 20170430181453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,14 @@ ActiveRecord::Schema.define(version: 20170430164903) do
     t.float "fear"
     t.float "joy"
     t.float "sadness"
+    t.float "panger"
+    t.float "pdisgust"
+    t.float "pfear"
+    t.float "psadness"
+    t.float "pjoy"
+    t.integer "ppain"
+    t.integer "pactivity"
+    t.integer "pdoses"
     t.index ["reset_password_token"], name: "index_entries_on_reset_password_token", unique: true
   end
 
