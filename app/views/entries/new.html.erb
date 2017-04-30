@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,900" rel="stylesheet">
+    <title>Index</title>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- <link href="ratchet.css" rel="stylesheet">
+    <script src="ratchet.js"></script>
+    <link href="custom.css" rel="stylesheet"> -->
+  </head>
+  <body style="background-color:#3fa9f5; font-family:Lato">
+    <br></br>
+  <div class="content">
+      <!-- Title Text -->
+       <div class="content-padded">
+          <h1 class="enter" align = "center" style="color:white">New Entry</h1>
+        </div>
+      <br></br><br></br>
+
+       <!-- Creating buttons for transitions to sign up and log in pages -->
+      <div class="form" align="center">
+      <%= form_for(@entry) do |f| %>
+        <%= f.number_field :pain, :placeholder => "Pain from 1 to 10" %>
+        <br></br>
+        <%= f.number_field :activity, :placeholder => "Activity from 1 to 5" %>
+        <br></br>
+        <%= f.number_field :doses, :placeholder => "Number of pills taken" %>
+        <br></br>
+        <%= f.text_field :diary, :placeholder => "Describe your day" %>
+        <div class="blue-bg" style="height: 50px; color: white: font-size: 20px;">
+          <div style="height:7px;"></div>
+          <span class="blue-bg" style="padding-top: 5px; font-size: 20px;">
+            <%= f.submit "Next" %>
+          </span>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  </body>
+</html>

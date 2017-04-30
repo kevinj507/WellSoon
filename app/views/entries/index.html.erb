@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,900" rel="stylesheet">
     <title>Index</title>
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -13,24 +13,29 @@
     <script src="ratchet.js"></script>
     <link href="custom.css" rel="stylesheet"> -->
   </head>
-  <body style="background-color:#3fa9f5, font-family:Roboto">
+  <body style="background-color:#3fa9f5; font-family:Lato">
     <br></br>
-  <div class="content">
+    <div class="content">
       <!-- Title Text -->
-       <div class="content-padded">
-          <h1 class="enter" align = "center" style="color:white">TrustPain</h1>
-        </div>
-      <br></br><br></br>
-       <!-- Creating buttons for transitions to sign up and log in pages -->
-       <div align="center">
-         <a class="btn btn-positive btn-block" id="nav" href="/users/sign_up">
-           Sign Up
-         </a>
-          <br></br>
-          <a class="btn btn-positive btn-block" id="nav" href="/users/sign_in">
-            Log In
-          </a>
+      <div class="content-padded">
+        <h1 class="enter" align = "center" style="color:white">WellSoon</h1>
       </div>
-  </div>
+      <br></br><br></br>
+      <!-- Creating buttons for transitions to sign up and log in pages -->
+      <div align="center">
+        <a class="btn btn-positive btn-block" id="nav" href="/entries/new" style="text-decoration:none; color:white">
+          New Entry
+        </a>
+          <br></br>
+        <a class="btn btn-positive btn-block" id="nav" href="/entries/progress" style="text-decoration:none; color:white">
+          View Progress
+        </a>
+      </div>
+      <% if @entries.first != nil %>
+        <%= @entries.each do |e| %>
+          <p> <% @e.id %></p>
+        <% end %>
+      <% end %>
+    </div>
   </body>
 </html>
