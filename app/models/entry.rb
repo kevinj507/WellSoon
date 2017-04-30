@@ -22,13 +22,16 @@
 #  last_sign_in_ip        :inet
 #  confirmed              :string
 #  user_id                :integer
+#  anger                  :float
+#  disgust                :float
+#  fear                   :float
+#  joy                    :float
+#  sadness                :float
 #
 
 class Entry < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
   belongs_to :user
 
 end

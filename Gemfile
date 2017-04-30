@@ -33,7 +33,9 @@ gem 'devise', git: 'https://github.com/plataformatec/devise'
 gem 'ratchet-rails'
 gem 'pry'
 gem 'better_errors'
-
+gem "twitter-bootstrap-rails"
+gem "httparty"
+gem "watson-api-client"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

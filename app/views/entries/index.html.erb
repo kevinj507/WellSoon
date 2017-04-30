@@ -31,11 +31,33 @@
           View Progress
         </a>
       </div>
-      <% if @entries.first != nil %>
-        <%= @entries.each do |e| %>
-          <p> <% @e.id %></p>
-        <% end %>
-      <% end %>
+
     </div>
+    <br></br>
+    <% if @entries.first != nil %>
+      <% @entries.each do |e| %>
+        <div align="middle" style="background:white; margin-left:10%; margin-right:10%; border:2px solid black">
+          <p>Date: <%= e.created_at.strftime("%m/%d/%Y at %I:%M%p %Z") %></p>
+          <p>Pain level: <%= e.pain %>/10</p>
+          <p>Activity level: <%= e.activity %>/5</p>
+          <p>Dosage taken: <%= e.doses %> pills</p>
+          <p style="font-weight:bold">-Journal-</p>
+          <%= e.diary %>
+          <br></br>
+          <p>Anger: <%= e.anger %> </p>
+          <p>Disgust: <%= e.disgust %> </p>
+          <p>Fear: <%= e.fear %> </p>
+          <p>Sadness: <%= e.sadness %> </p>
+          <p>Joy: <%= e.joy %> </p>
+          <br></br>
+          <%= button_to "Delete", remove_entry_path(id: e.id),
+             {
+              :method => :delete,
+              :style => "padding-bottom: 25px;"
+             } %>
+          <br></br>
+        </div>
+      <% end %>
+    <% end %>
   </body>
 </html>
