@@ -44,20 +44,13 @@
           <p style="font-weight:bold">-Journal-</p>
           <%= e.diary %>
           <br></br>
-          <% if e.panger == 0 %>
+          
             <p>Anger: <%= e.anger.round %> %</p>
             <p>Disgust: <%= e.disgust.round %> %</p>
             <p>Fear: <%= e.fear.round %> %</p>
             <p>Sadness: <%= e.sadness.round %> %</p>
             <p>Joy: <%= e.joy.round %> %</p>
-          <% else %>
-            <p>Anger: <%= e.anger.round %> %, change of <%= ((e.anger - e.panger)/e.panger).round %> %</p>
-            <p>Disgust: <%= e.disgust.round %> %, change of <%= ((e.disgust - e.pdisgust)/e.pdisgust).round %> %</p>
-            <p>Fear: <%= e.fear.round %> %, change of <%= ((e.fear - e.pfear)/e.pfear).round %> %</p>
-            <p>Sadness: <%= e.sadness.round %> %, change of <%= ((e.sadness - e.psadness)/e.psadness).round %> %</p>
-            <p>Joy: <%= e.joy.round %> %, change of <%= ((e.joy - e.pjoy)/e.pjoy).round %> %</p>
-          <% end %>
-          <%= require pry; binding.pry %>
+
           <br></br>
           <%= button_to "Delete", remove_entry_path(id: e.id),
              {
