@@ -1,6 +1,7 @@
 class RedoxtestController < ApplicationController
 
   def index
+    puts 'hit index controller'
     head :ok
     @querystring = request.env["QUERY_STRING"]
     @verification = request.headers["HTTP_VERIFICATION_TOKEN"]
