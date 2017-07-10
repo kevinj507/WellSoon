@@ -19,5 +19,10 @@ Rails.application.routes.draw do
   end
   root 'entries#index'
 
-  resources :redoxtest
+  resources :redoxtest do
+    member do
+      get :redox
+      post :redox
+    end
+  end
 end
