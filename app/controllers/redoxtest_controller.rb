@@ -4,6 +4,7 @@ class RedoxtestController < ApplicationController
     puts 'hit index controller'
     head :ok
     @querystring = request.env["QUERY_STRING"]
+    @challenge = @querystring[10..-1]
     @verification = request.headers["HTTP_VERIFICATION_TOKEN"]
     if @verification == 'blockcare'
       render plain: @querystring
