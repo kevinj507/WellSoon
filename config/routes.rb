@@ -18,4 +18,6 @@ Rails.application.routes.draw do
 
   end
   root 'entries#index'
+
+  resources :redoxtest
 end
