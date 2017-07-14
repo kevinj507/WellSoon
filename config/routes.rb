@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
   root 'entries#index'
 
-  resources :redoxtest do
+  resources :redoxtest, defaults: {format: :json} do
     member do
       get :redox
       post :redox

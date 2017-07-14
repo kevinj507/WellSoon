@@ -1,5 +1,6 @@
 class RedoxtestController < ApplicationController
   skip_before_action :verify_authenticity_token
+  respond_to :json
   def index
     @querystring = request.env["QUERY_STRING"]
     @challenge = @querystring[10..-1]
