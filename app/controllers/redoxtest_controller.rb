@@ -1,5 +1,5 @@
 class RedoxtestController < ApplicationController
-
+  skip_before_action :verify_authenticity_token
   def index
     @querystring = request.env["QUERY_STRING"]
     @challenge = @querystring[10..-1]
@@ -10,7 +10,7 @@ class RedoxtestController < ApplicationController
   end
 
   def create
-    render plain: 'curl post request'
+    @jsonobj = request.params["Meta"]["DataModel"]
   end
 
   def redox
